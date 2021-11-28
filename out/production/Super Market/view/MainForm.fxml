@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="580.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <ImageView fx:id="imgBackGround" fitHeight="427.0" fitWidth="715.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-27.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-115.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@assests/Images/images.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="176.0" layoutX="200.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="224.0">
+         <image>
+            <Image url="@assests/Images/logosup.png" />
+         </image></ImageView>
+      <Separator layoutX="176.0" layoutY="136.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+      <ImageView fx:id="img_Admin" fitHeight="124.0" fitWidth="166.0" layoutX="23.0" layoutY="153.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="100.0">
+         <image>
+            <Image url="@assests/Images/admin.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="img_Reciption" fitHeight="124.0" fitWidth="166.0" layoutX="376.0" layoutY="153.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0">
+         <image>
+            <Image url="@assests/Images/receptionist-silhouette-2.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lbl_Select" alignment="CENTER" layoutX="200.0" layoutY="280.0" prefHeight="25.0" prefWidth="147.0" text="Welcome" textFill="#0a39f7" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="274.0" layoutY="318.0" text="Please select one of above main operations to proceed" textAlignment="CENTER" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Label>
+      <Label alignment="CENTER" layoutX="182.0" layoutY="108.0" text="Point Of Login " textAlignment="CENTER" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="182.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

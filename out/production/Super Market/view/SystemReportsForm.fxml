@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="735.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SystemReportsFormController">
+   <children>
+      <ImageView fx:id="imgHome" fitHeight="40.0" fitWidth="46.0" layoutX="57.0" layoutY="56.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@assests/Images/home.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblHome" layoutX="83.0" layoutY="37.0" prefHeight="17.0" prefWidth="40.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="7.0" />
+      <Label alignment="CENTER" layoutX="240.0" layoutY="61.0" text="Adminstrator" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="21.0">
+         <font>
+            <Font name="Book Antiqua Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="150.0" layoutY="123.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="62.0" />
+      <ImageView fx:id="imgItem" fitHeight="81.0" fitWidth="105.0" layoutX="130.0" layoutY="102.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="72.0">
+         <image>
+            <Image url="@assests/Images/items.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ImgReport" fitHeight="81.0" fitWidth="105.0" layoutX="334.0" layoutY="102.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="304.0" AnchorPane.topAnchor="72.0">
+         <image>
+            <Image url="@assests/Images/report.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="25.0" layoutY="264.0" prefHeight="405.0" prefWidth="600.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="195.0">
+         <children>
+            <Label layoutX="6.0" layoutY="14.0" text="System Reports" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Ubuntu" size="27.0" />
+               </font>
+            </Label>
+            <JFXTabPane layoutX="138.0" layoutY="163.0" prefHeight="319.0" prefWidth="659.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <tabs>
+                  <Tab fx:id="tabDaily" onSelectionChanged="#textChangeOnSelection" text="Daily Income">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tblDailyIncome" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columns>
+                                  <TableColumn prefWidth="106.0" text="Order Id" />
+                                  <TableColumn prefWidth="107.0" text="Customer ID" />
+                                    <TableColumn prefWidth="122.0" text="Order TIme" />
+                                    <TableColumn prefWidth="146.0" text="Total Discount (Rs)" />
+                                    <TableColumn prefWidth="157.0" text="Total Price (Rs)" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabMonthly" onSelectionChanged="#textChangeOnSelection" text="Monthly Income">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tblMonthlyIncome" layoutX="100.0" layoutY="34.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columns>
+                                  <TableColumn prefWidth="106.0" text="Order ID" />
+                                  <TableColumn prefWidth="107.0" text="Customer ID" />
+                                    <TableColumn prefWidth="122.0" text="Order Time" />
+                                    <TableColumn prefWidth="146.0" text="Total Discount (Rs)" />
+                                    <TableColumn prefWidth="157.0" text="Total Price (Rs)" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabAnnual" onSelectionChanged="#textChangeOnSelection" text="Annual Income">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tblAnnualIncome" layoutX="194.0" layoutY="32.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columns>
+                                  <TableColumn prefWidth="106.0" text="Order ID" />
+                                  <TableColumn prefWidth="107.0" text="Customer Id" />
+                                    <TableColumn prefWidth="122.0" text="Order Time" />
+                                    <TableColumn prefWidth="146.0" text="Total Discount (Rs)" />
+                                    <TableColumn prefWidth="157.0" text="Total Price (Rs)" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabCustomer" onSelectionChanged="#textChangeOnSelection" text="Customer Vise Income ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="659.0">
+                           <children>
+                              <TableView fx:id="tblCustomerIncome" layoutX="130.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columns>
+                                  <TableColumn prefWidth="106.0" text="Order Id" />
+                                  <TableColumn prefWidth="107.0" text="Customer ID" />
+                                    <TableColumn prefWidth="122.0" text="Order Time" />
+                                    <TableColumn prefWidth="146.0" text="Total Discount (Rs)" />
+                                    <TableColumn prefWidth="157.0" text="Total Price (Rs)" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+            <Label fx:id="lbl_Date_Time" layoutX="507.0" layoutY="53.0" prefHeight="31.0" prefWidth="169.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="477.0" text="Most Movable Item" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="477.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="368.0" layoutY="477.0" text="Least Movable Item" AnchorPane.rightAnchor="144.0" AnchorPane.topAnchor="477.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMost" alignment="CENTER" layoutX="205.0" layoutY="477.0" prefHeight="27.0" prefWidth="105.0" AnchorPane.leftAnchor="205.0" AnchorPane.topAnchor="477.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLeast" alignment="CENTER" layoutX="554.0" layoutY="477.0" prefHeight="27.0" prefWidth="105.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="477.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+
+            <Label fx:id="lblIncomeTxt" layoutX="112.0" layoutY="430.0" prefHeight="17.0" prefWidth="244.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblSelect" alignment="CENTER" layoutX="180.0" layoutY="188.0" textAlignment="CENTER" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="158.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="130.0" layoutY="208.0" textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="178.0" />
+      <ImageView fx:id="imgBusiness" fitHeight="81.0" fitWidth="105.0" layoutX="413.0" layoutY="65.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="72.0">
+         <image>
+            <Image url="@assests/Images/icons8-list-is-empty.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

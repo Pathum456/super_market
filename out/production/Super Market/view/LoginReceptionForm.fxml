@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginReceptionFormController">
+   <children>
+      <ImageView fitHeight="415.0" fitWidth="715.0" layoutX="5.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-115.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@assests/Images/images.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgHome" fitHeight="40.0" fitWidth="46.0" layoutX="17.0" layoutY="16.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@assests/Images/home.gif" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="200.0" layoutY="21.0" text="Cashier" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="21.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="110.0" layoutY="83.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="73.0" />
+      <ImageView fitHeight="130.0" fitWidth="142.0" layoutX="241.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="239.0">
+         <image>
+            <Image url="@assests/Images/receptionist-silhouette-2.png" />
+         </image>
+      </ImageView>
+      <JFXPasswordField fx:id="txtPassword" alignment="CENTER" layoutX="110.0" layoutY="295.0" prefHeight="25.0" prefWidth="200.0" promptText="Pass Word" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="285.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="txtName" alignment="CENTER" layoutX="110.0" layoutY="253.0" prefHeight="25.0" prefWidth="371.0" promptText="User Name" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="243.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="imgLogin" fitHeight="40.0" fitWidth="152.0" layoutX="380.0" layoutY="347.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="347.0">
+         <image>
+            <Image url="@assests/Images/login-button-260nw-369107741.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgSingUp" fitHeight="40.0" fitWidth="130.0" layoutX="160.0" layoutY="347.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="347.0">
+         <image>
+            <Image url="@assests/Images/hii.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="53.0" layoutX="534.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="282.0">
+         <image>
+            <Image url="@assests/Images/icons8-password.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblHome" layoutX="63.0" layoutY="15.0" prefHeight="17.0" prefWidth="40.0" textFill="WHITE" AnchorPane.leftAnchor="53.0" />
+   </children>
+</AnchorPane>
